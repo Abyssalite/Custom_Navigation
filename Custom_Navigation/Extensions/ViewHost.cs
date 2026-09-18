@@ -1,6 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace Avalonia_Navigation;
+namespace Custom_Navigation;
 
 public partial class ViewHost : ObservableObject, IViewHost
 {

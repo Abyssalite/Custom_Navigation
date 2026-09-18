@@ -1,4 +1,4 @@
-namespace Avalonia_Navigation;
+namespace Custom_Navigation;
 
 public interface ITabView
 {

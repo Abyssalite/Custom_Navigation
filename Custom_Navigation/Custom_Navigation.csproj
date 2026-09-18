@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <PackageId>Avalonia_Navigation</PackageId>
+    <PackageId>Custom_Navigation</PackageId>
     <Version>0.0.2</Version>
     <Authors>Abyssalite</Authors>
     <Description>My navigation library</Description>

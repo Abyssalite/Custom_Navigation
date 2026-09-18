@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Avalonia_Navigation;
+namespace Custom_Navigation;
 
 public static class ServiceCollectionExtensions
 {

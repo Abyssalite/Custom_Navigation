@@ -1,4 +1,4 @@
-namespace Avalonia_Navigation;
+namespace Custom_Navigation;
 
 public class NavigatorService : INavigatorService
 {
@@ -96,22 +96,22 @@ public class NavigatorService : INavigatorService
         }
     }
 
-public async Task ClearStack()
-{
-    _history.Clear();
+    public async Task ClearStack()
+    {
+        _history.Clear();
 
-    if (FirstView is null)
-        throw new Exception("First view was not set");
+        if (FirstView is null)
+            throw new Exception("First view was not set");
 
-    NavigationState? last = _current;
-    _current = new NavigationState(
-        FirstView.MainContent,
-        _current?.SideContent,
-        FirstView.TopBar
-    );
+        NavigationState? last = _current;
+        _current = new NavigationState(
+            FirstView.MainContent,
+            _current?.SideContent,
+            FirstView.TopBar
+        );
 
-    switchPage(_current.TopBar, _current.SideContent, _current.MainContent, last);
-}
+        switchPage(_current.TopBar, _current.SideContent, _current.MainContent, last);
+    }
 
     public bool IsExit()
     {
