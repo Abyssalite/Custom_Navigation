@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>Custom_Navigation</PackageId>
-    <Version>0.0.2</Version>
+    <Version>0.1.0</Version>
     <Authors>Abyssalite</Authors>
     <Description>My navigation library</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

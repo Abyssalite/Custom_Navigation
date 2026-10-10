@@ -1,6 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace Custom_Navigation;
+namespace Custom_Tab;
 
 public partial class TabView : ObservableObject, ITabView
 {

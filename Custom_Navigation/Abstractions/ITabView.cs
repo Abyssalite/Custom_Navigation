@@ -1,4 +1,4 @@
-namespace Custom_Navigation;
+namespace Custom_Tab;
 
 public interface ITabView
 {

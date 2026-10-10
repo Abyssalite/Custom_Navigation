@@ -1,9 +1,12 @@
-namespace Custom_Navigation;
+using Custom_Navigation;
+using Custom_Tab;
+using Custom_Popup;
 
 public class NavigatorService : INavigatorService
 {
     private readonly IViewHost _host;
     private readonly ITabView _tabs;
+    private readonly IPopupHost _popup;
 
     private readonly Stack<NavigationState> _history = new();
     private NavigationState? _current;
@@ -11,10 +14,11 @@ public class NavigatorService : INavigatorService
 
     public NavigationState? FirstView { get; set; }
 
-    public NavigatorService(IViewHost host, ITabView tabs)
+    public NavigatorService(IViewHost host, ITabView tabs, IPopupHost popup)
     {
         _host = host;
         _tabs = tabs;
+        _popup = popup;
     }
 
     private async void switchPage(object? TopBar, object? SideContent, object? MainContent, NavigationState? last)
@@ -92,6 +96,8 @@ public class NavigatorService : INavigatorService
             _current = _history.Pop();
 
             switchPage(_current.TopBar, _current.SideContent, _current.MainContent, last);
+            
+            _popup.Close();
             await _tabs.clearTab();
         }
     }
