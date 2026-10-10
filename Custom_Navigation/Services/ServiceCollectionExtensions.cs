@@ -4,7 +4,7 @@ namespace Custom_Navigation;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddAvaloniaNavigation(this IServiceCollection services)
+    public static IServiceCollection AddCustomNavigation(this IServiceCollection services)
     {
         services.AddSingleton<IViewHost, ViewHost>();
         services.AddSingleton<INavigatorService, NavigatorService>();
